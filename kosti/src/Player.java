@@ -1,25 +1,20 @@
-
 import java.util.Random;
 
-
-public class Player {
+class Player {
     private String name;
-    private int currentNum;
     private Random rnd = new Random();
 
     Player(String name) {
         this.name = name;
     }
 
-    public void doFling() {
-        currentNum = rnd.nextInt(12);
+    int doFling() {
+        int curr;
+        curr = rnd.nextInt(6);
+        return curr == 0 ? 1 : curr;
     }
 
-    public int getCurrentNum () {
-        return currentNum;
-    }
-
-    public String getName() {
+    String getName() {
         return name;
     }
 
